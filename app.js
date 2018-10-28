@@ -32,6 +32,6 @@ app.use('/register', registerRoute);
 app.use('/login', loginRoute);
 app.use('/getLogs', getLogsRoute);
 app.use('/insertLog', insertLogRoute);
-app.use('subscribe', subscribeRoute);
+app.use('/subscribe', subscribeRoute);
 
 app.listen(port, () => console.log(`Listening on port ${port}!`));
