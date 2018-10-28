@@ -16,10 +16,8 @@ app.use(function(req, res, next) {
 app.use(bodyParser.json());
 
 
-webpush.setGCMAPIKey(process.env.googleAPIKey);
-
 // Push Notifications
-webpush.setVapidDetails('mailto:test@test.com', process.env.publicVapidKey, privateVapidKey);
+webpush.setVapidDetails('mailto:test@test.com', process.env.publicVapidKey, process.env.privateVapidKey);
 
 // let pushIntervalId;
 let subscription;

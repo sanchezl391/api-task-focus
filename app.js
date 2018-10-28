@@ -27,7 +27,6 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // Telling all to look in logRoutes to see if it can handle '/'
-// app.use('/', logRoutes);
 app.use('/register', registerRoute);
 app.use('/login', loginRoute);
 app.use('/getLogs', getLogsRoute);
