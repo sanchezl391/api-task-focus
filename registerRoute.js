@@ -1,9 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const time = require('./time');
 const config = require('./database');
-
-
 
 var bodyParser = require('body-parser');
 var app = express();
