@@ -4,6 +4,7 @@ var app = express();
 var bodyParser = require('body-parser');
 var registerRoute = require('./registerRoute');
 var loginRoute = require('./loginRoute');
+var subscribeRoute = require('./pushNotificationRoute');
 var getLogsRoute = require('./getLogsRoute');
 var insertLogRoute = require('./insertLogRoute');
 const port = process.env.PORT || 3001;
@@ -31,5 +32,6 @@ app.use('/register', registerRoute);
 app.use('/login', loginRoute);
 app.use('/getLogs', getLogsRoute);
 app.use('/insertLog', insertLogRoute);
+app.use('subscribe', subscribeRoute);
 
-app.listen(port, () => console.log(`Listening on port ${port}!`))
+app.listen(port, () => console.log(`Listening on port ${port}!`));
