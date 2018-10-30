@@ -26,13 +26,14 @@ let subscription;
 router.post('/', (req, response) => { 
     // Get push subscription object
     console.log(req.body);
-    subscription = req.body;
+    subscription = req.body.subscription;
+    let message = req.body.message;
 
     // Send 201 - resource created
     response.status(201).json({});
 
     // Create payload
-    const payload = JSON.stringify({title: 'NOTE-STACK - time for your break!'});
+    const payload = JSON.stringify({title: `NOTE-STACK - ${message}`});
     
     // Pass object into sendNotification
     webpush
