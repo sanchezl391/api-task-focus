@@ -32,20 +32,12 @@ router.post('/', (req, response) => {
     response.status(201).json({});
 
     // Create payload
-    const payload = JSON.stringify({title: 'Note-Stack'});
+    const payload = JSON.stringify({title: 'NOTE-STACK - time for your break!'});
     
     // Pass object into sendNotification
     webpush
         .sendNotification(subscription, payload)
         .catch(err => console.log(err))
-
-    
 });
-
-// router.delete("/unregister", (req, res, next) => {
-//     subscription = null;
-//     clearInterval(pushIntervalId);
-//     res.sendStatus(200);
-// });
 
 module.exports = router;
