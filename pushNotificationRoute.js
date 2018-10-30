@@ -28,7 +28,7 @@ router.post('/', (req, response) => {
     subscription = req.body;
 
     // Send 201 - resource created
-    res.status(201).json({});
+    response.status(201).json({});
 
     // Create payload
     const payload = JSON.stringify({title: 'Note-Stack'});
