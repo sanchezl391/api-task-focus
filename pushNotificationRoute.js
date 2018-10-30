@@ -25,6 +25,7 @@ let subscription;
 // Subscribe Route
 router.post('/', (req, response) => { 
     // Get push subscription object
+    console.log(req.body);
     subscription = req.body;
 
     // Send 201 - resource created
