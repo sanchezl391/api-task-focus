@@ -29,6 +29,8 @@ router.post('/', (req, response) => {
 
     client.query(addDataToTableQuery, (err, res) => {
         client.end();
+        if(err) console.log(err);
+        else res.send({success: true});
     });
 });
 
